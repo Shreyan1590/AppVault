@@ -12,6 +12,7 @@ import TeamSection from '@/components/sections/team';
 import FaqSection from '@/components/sections/faq';
 import { ScrollAnimation } from '@/components/scroll-animation';
 import ContactSection from '@/components/sections/contact';
+import CtaSection from '@/components/sections/cta';
 
 export default async function Home() {
   return (
@@ -42,6 +43,9 @@ export default async function Home() {
         </ScrollAnimation>
         <ScrollAnimation>
           <FaqSection />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <CtaSection />
         </ScrollAnimation>
         <ScrollAnimation>
           <ContactSection />
