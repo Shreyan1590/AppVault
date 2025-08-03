@@ -1,21 +1,10 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
-interface FooterProps {
-  onShowPrivacy: () => void;
-  onShowTerms: () => void;
-}
-
-export default function Footer({ onShowPrivacy, onShowTerms }: FooterProps) {
-  const scrollTo = (selector: string) => {
-    const element = document.querySelector(selector);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
+export default function Footer() {
   return (
     <footer id="contact" className="border-t border-border/20 py-12 md:py-16">
       <div className="container mx-auto px-4">
@@ -60,8 +49,8 @@ export default function Footer({ onShowPrivacy, onShowTerms }: FooterProps) {
         <div className="mt-16 border-t border-border/20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} AppVault Inc. All rights reserved. <span className="hidden md:inline">Use code <code className="bg-secondary px-1.5 py-1 rounded-sm font-code">SCROLL10</code> for 10% off.</span></p>
           <div className="flex items-center gap-4 text-sm">
-            <button onClick={onShowPrivacy} className="text-muted-foreground hover:text-foreground">Privacy Policy</button>
-            <button onClick={onShowTerms} className="text-muted-foreground hover:text-foreground">Terms of Service</button>
+            <Link href="/privacy-policy" className="text-muted-foreground hover:text-foreground">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="text-muted-foreground hover:text-foreground">Terms of Service</Link>
           </div>
         </div>
       </div>

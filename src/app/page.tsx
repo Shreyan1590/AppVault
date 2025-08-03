@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from 'react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
@@ -15,29 +13,8 @@ import PricingSection from '@/components/sections/pricing';
 import TeamSection from '@/components/sections/team';
 import FaqSection from '@/components/sections/faq';
 import { ScrollAnimation } from '@/components/scroll-animation';
-import PrivacyPolicySection from '@/components/sections/privacy-policy';
-import TermsOfServiceSection from '@/components/sections/terms-of-service';
 
 export default function Home() {
-  const [showPrivacy, setShowPrivacy] = React.useState(false);
-  const [showTerms, setShowTerms] = React.useState(false);
-
-  const handleShowPrivacy = () => {
-    setShowPrivacy(true);
-    setShowTerms(false);
-    setTimeout(() => {
-      document.getElementById('privacy-policy')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  };
-
-  const handleShowTerms = () => {
-    setShowTerms(true);
-    setShowPrivacy(false);
-    setTimeout(() => {
-      document.getElementById('terms-of-service')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  };
-
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
@@ -70,24 +47,11 @@ export default function Home() {
         <ScrollAnimation animation="slideInUp">
           <TeamSection />
         </ScrollAnimation>
-        
-        {showPrivacy && (
-          <ScrollAnimation>
-            <PrivacyPolicySection />
-          </ScrollAnimation>
-        )}
-        
-        {showTerms && (
-          <ScrollAnimation>
-            <TermsOfServiceSection />
-          </ScrollAnimation>
-        )}
-
         <ScrollAnimation animation="fadeIn">
           <FaqSection />
         </ScrollAnimation>
       </main>
-      <Footer onShowPrivacy={handleShowPrivacy} onShowTerms={handleShowTerms} />
+      <Footer />
     </div>
   );
 }
