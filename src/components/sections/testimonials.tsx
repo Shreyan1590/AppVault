@@ -28,14 +28,14 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-12 md:py-24">
+    <section id="testimonials" className="py-12 md:py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold md:text-4xl">
-            Social Proof That Feels Alive
+            What Our Customers Are Saying
           </h2>
           <p className="mt-4 text-muted-foreground md:text-lg">
-            Don't just take our word for it. Here's what our customers are saying.
+            Real stories from teams who've launched with AppVault.
           </p>
         </div>
         <Carousel
@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 group">
                 <div className="p-1">
-                 <Card className="bg-card/50 border-border/20 p-8 shadow-lg h-full transition-transform duration-300 group-hover:scale-105">
+                 <Card className="bg-background/50 border-border/20 p-8 shadow-lg h-full transition-transform duration-300 group-hover:scale-105">
                     <CardContent className="p-0 text-left flex flex-col h-full">
                         <p className="text-lg italic text-foreground flex-grow">
                         “{testimonial.quote}”
