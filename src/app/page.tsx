@@ -3,6 +3,9 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import HeroSection from '@/components/sections/hero';
 import ProblemSolutionSection from '@/components/sections/problem-solution';
+import FeaturesSection from '@/components/sections/features';
+import HowItWorksSection from '@/components/sections/how-it-works';
+import UseCasesSection from '@/components/sections/use-cases';
 import OfferingsSection from '@/components/sections/offerings';
 import TractionSection from '@/components/sections/traction';
 import TeamSection from '@/components/sections/team';
@@ -17,6 +20,15 @@ export default async function Home() {
         <HeroSection />
         <ScrollAnimation>
           <ProblemSolutionSection />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <FeaturesSection />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <HowItWorksSection />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <UseCasesSection />
         </ScrollAnimation>
         <ScrollAnimation>
           <OfferingsSection />
