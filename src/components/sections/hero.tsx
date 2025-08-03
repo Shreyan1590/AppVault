@@ -23,18 +23,15 @@ export default function HeroSection() {
       id="hero"
       className="relative overflow-hidden py-20 md:py-32"
     >
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-20"
-      >
-        <div className="blur-[106px] h-56 bg-gradient-to-br from-primary to-cyan-400"></div>
-        <div className="blur-[106px] h-32 bg-gradient-to-r from-blue-400 to-sky-300"></div>
-      </div>
        <div
+        aria-hidden="true"
+        className="absolute inset-0 z-0 animate-gradient-xy bg-[length:400%_400%] bg-gradient-to-br from-background via-primary/20 to-background"
+      ></div>
+      <div
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent"
       ></div>
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto px-4 text-center relative z-10">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
           Build & Launch Your App <br/> in <span className="text-primary">Record Time</span>
         </h1>

@@ -23,31 +23,31 @@ export default async function Home() {
         <ScrollAnimation>
           <ProblemSolutionSection />
         </ScrollAnimation>
-        <ScrollAnimation>
+        <ScrollAnimation animation="slideInRight">
           <FeaturesSection />
         </ScrollAnimation>
         <ScrollAnimation>
           <HowItWorksSection />
         </ScrollAnimation>
-        <ScrollAnimation>
+        <ScrollAnimation animation="slideInLeft">
           <UseCasesSection />
         </ScrollAnimation>
         <ScrollAnimation>
           <OfferingsSection />
         </ScrollAnimation>
-        <ScrollAnimation>
+        <ScrollAnimation animation="fadeIn">
           <TractionSection />
         </ScrollAnimation>
         <ScrollAnimation>
           <TeamSection />
         </ScrollAnimation>
-        <ScrollAnimation>
+        <ScrollAnimation animation="fadeIn">
           <FaqSection />
         </ScrollAnimation>
         <ScrollAnimation>
           <CtaSection />
         </ScrollAnimation>
-        <ScrollAnimation>
+        <ScrollAnimation animation="fadeIn">
           <ContactSection />
         </ScrollAnimation>
       </main>
