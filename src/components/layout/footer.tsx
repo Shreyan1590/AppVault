@@ -5,9 +5,19 @@ import Link from "next/link";
 import { Github, Linkedin, Mail, Twitter, Download } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Footer() {
   const isMobile = useIsMobile();
+  const { toast } = useToast();
+
+  const handleDownloadClick = () => {
+    toast({
+      title: "Add to Home Screen",
+      description: "You can add this website to your home screen from your browser's menu.",
+    });
+  };
+
   return (
     <footer id="contact" className="border-t border-border/20 py-12 md:py-16">
       <div className="container mx-auto px-4">
@@ -51,7 +61,7 @@ export default function Footer() {
         </div>
         {isMobile && (
           <div className="mt-8 flex justify-center">
-            <Button>
+            <Button onClick={handleDownloadClick}>
               <Download className="mr-2 h-4 w-4" />
               Download App
             </Button>
