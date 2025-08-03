@@ -13,9 +13,9 @@ export default function HeroSection() {
     }
   };
     const scrollToContact = () => {
-    const footer = document.querySelector('footer');
-    if (footer) {
-      footer.scrollIntoView({ behavior: 'smooth' });
+    const contact = document.getElementById('contact');
+    if (contact) {
+      contact.scrollIntoView({ behavior: 'smooth' });
     }
   };
   return (
@@ -38,11 +38,11 @@ export default function HeroSection() {
         <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
           Leverage our library of 50+ production-ready app templates and a powerful no-code editor to go from idea to launch faster than ever before.
         </p>
-        <div className="mt-8 flex justify-center gap-4">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" onClick={scrollToContact}>
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto" onClick={scrollToContact}>
             Start Building for Free
           </Button>
-          <Button size="lg" variant="outline" onClick={scrollToOfferings}>
+          <Button size="lg" variant="outline" className="w-full sm:w-auto" onClick={scrollToOfferings}>
             Explore Templates
           </Button>
         </div>
@@ -55,8 +55,8 @@ export default function HeroSection() {
                 <InfinityIcon className="h-8 w-auto text-muted-foreground" />
                 <Globe className="h-8 w-auto text-muted-foreground" />
                 <Code className="h-8 w-auto text-muted-foreground" />
-                <p className="font-bold text-2xl text-muted-foreground">QuantumLeap</p>
-                <p className="font-bold text-2xl text-muted-foreground">NexusCorp</p>
+                <p className="font-bold text-xl md:text-2xl text-muted-foreground">QuantumLeap</p>
+                <p className="font-bold text-xl md:text-2xl text-muted-foreground">NexusCorp</p>
             </div>
         </div>
 
@@ -70,6 +70,7 @@ export default function HeroSection() {
                         height={675}
                         className="h-full w-full object-cover object-center"
                         data-ai-hint="app builder interface"
+                        priority
                      />
                 </div>
             </div>

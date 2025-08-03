@@ -50,9 +50,9 @@ const offerings = [
 
 export default function OfferingsSection() {
     const scrollToContact = () => {
-    const footer = document.querySelector('footer');
-    if (footer) {
-      footer.scrollIntoView({ behavior: 'smooth' });
+    const contact = document.getElementById('contact');
+    if (contact) {
+      contact.scrollIntoView({ behavior: 'smooth' });
     }
   };
   return (
@@ -66,7 +66,7 @@ export default function OfferingsSection() {
             From solo developers to large agencies, we have a plan that fits your needs.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {offerings.map((offer, index) => (
             <Card
               key={index}
