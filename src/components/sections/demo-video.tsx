@@ -1,7 +1,7 @@
-
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { PlayCircle } from "lucide-react";
+import { Button } from "../ui/button";
 
 export default function DemoVideoSection() {
   return (
@@ -16,7 +16,7 @@ export default function DemoVideoSection() {
         <Card className="mt-12 mx-auto max-w-4xl p-2 bg-card/50 backdrop-blur-sm border-border/20 shadow-2xl">
           <div className="aspect-video w-full overflow-hidden rounded-md relative flex items-center justify-center">
             <Image
-              src="https://images.unsplash.com/photo-1587614203976-365c7d6297e2?q=80&w=1200&auto=format&fit=crop"
+              src="https://placehold.co/1200x675.png"
               alt="Demo video thumbnail showing a sleek app interface"
               width={1200}
               height={675}
@@ -31,6 +31,9 @@ export default function DemoVideoSection() {
             </div>
           </div>
         </Card>
+        <div className="mt-8 text-center">
+            <Button size="lg" variant="outline">Want to try it yourself? Get a Free Demo</Button>
+        </div>
       </div>
     </section>
   );

@@ -41,7 +41,7 @@ const pricingTiers = {
       missingFeatures: ["Full source code export"],
       buttonText: "Start 14-Day Trial",
       variant: "default",
-      badge: "Recommended",
+      badge: "Recommended 🔥",
     },
     {
       title: "Agency",
@@ -90,7 +90,7 @@ const pricingTiers = {
       missingFeatures: ["Full source code export"],
       buttonText: "Start 14-Day Trial",
       variant: "default",
-      badge: "Recommended",
+      badge: "Recommended 🔥",
     },
     {
       title: "Agency",

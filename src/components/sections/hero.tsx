@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Globe, InfinityIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
     const scrollToContact = () => {
@@ -41,7 +41,7 @@ export default function HeroSection() {
             <div className="bg-background/80 rounded-lg p-2">
                 <div className="aspect-video w-full overflow-hidden rounded-md">
                      <Image
-                        src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+                        src="https://placehold.co/1200x675.png"
                         alt="A user customizing an application in the AppVault no-code editor, with a marketplace of templates visible."
                         width={1200}
                         height={675}

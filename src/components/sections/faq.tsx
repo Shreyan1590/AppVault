@@ -17,10 +17,13 @@ const faqs = [
       "Yes! All our templates are built on clean, modern frameworks. With our B2B and White-Label plans, you get full access to the source code, allowing you to host it on your own infrastructure and customize it without limitations.",
   },
   {
-    question: "What kind of support do you offer?",
-    answer:
-      "We offer comprehensive documentation and community support for all users. Our B2B and White-Label clients receive dedicated account managers, priority support, and optional Service Level Agreements (SLAs) to ensure their success.",
+    question: "Is my data secure?",
+    answer: "Absolutely. We use industry-standard encryption and security protocols to ensure your data is safe and secure. Our infrastructure is built on enterprise-grade providers to guarantee reliability and protection."
   },
+  {
+    question: "Can I cancel anytime?",
+    answer: "Yes, you can cancel your subscription at any time. You'll retain access to your account and applications until the end of your billing period. There are no long-term contracts or hidden fees."
+  }
 ];
 
 export default function FaqSection() {

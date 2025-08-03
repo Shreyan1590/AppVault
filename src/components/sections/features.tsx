@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Layers, DraftingCompass, Rocket, Code, ShieldCheck, Component } from "lucide-react";
 

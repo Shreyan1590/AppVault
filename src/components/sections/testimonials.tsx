@@ -7,21 +7,21 @@ const testimonials = [
         quote: "AppVault is a revelation. We delivered a client's MVP in two weeks instead of three months. The ability to customize high-quality templates and export the code gives us the speed of no-code with the power of a custom stack. It's a complete game-changer for our agency.",
         name: "Jane Doe",
         title: "CTO, Innovate Solutions",
-        avatarUrl: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&auto=format&fit=crop",
+        avatarUrl: "https://placehold.co/100x100.png",
         avatarFallback: "JD"
     },
     {
         quote: "As a startup founder, time and capital are our most valuable assets. AppVault allowed us to launch and start getting feedback in days, not months. The template library saved us thousands in design and development costs.",
         name: "John Smith",
         title: "Founder, Tech Startup",
-        avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop",
+        avatarUrl: "https://placehold.co/100x100.png",
         avatarFallback: "JS"
     },
     {
         quote: "The white-labeling solution is incredible. We can now offer our clients fully branded, custom applications without hiring a massive development team. Our profit margins have never been better.",
         name: "Emily White",
         title: "Director, Digital Agency",
-        avatarUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100&auto=format&fit=crop",
+        avatarUrl: "https://placehold.co/100x100.png",
         avatarFallback: "EW"
     }
 ];
@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
                         </p>
                         <div className="mt-6 flex items-center gap-4">
                             <Avatar>
-                                <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} />
+                                <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} data-ai-hint="person" />
                                 <AvatarFallback>{testimonial.avatarFallback}</AvatarFallback>
                             </Avatar>
                             <div>
