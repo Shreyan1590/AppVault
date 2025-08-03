@@ -7,6 +7,7 @@ import OfferingsSection from '@/components/sections/offerings';
 import TractionSection from '@/components/sections/traction';
 import TeamSection from '@/components/sections/team';
 import FaqSection from '@/components/sections/faq';
+import { ScrollAnimation } from '@/components/scroll-animation';
 
 export default async function Home() {
   const teamData = await generateTeamMemberHeadshots({
@@ -18,11 +19,21 @@ export default async function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <ProblemSolutionSection />
-        <OfferingsSection />
-        <TractionSection />
-        <TeamSection headshots={teamData.headshots} />
-        <FaqSection />
+        <ScrollAnimation>
+          <ProblemSolutionSection />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <OfferingsSection />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <TractionSection />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <TeamSection headshots={teamData.headshots} />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <FaqSection />
+        </ScrollAnimation>
       </main>
       <Footer />
     </div>
