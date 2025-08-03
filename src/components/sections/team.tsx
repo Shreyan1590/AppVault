@@ -1,17 +1,20 @@
 import Image from 'next/image';
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import type { GenerateTeamMemberHeadshotsOutput } from '@/ai/flows/generate-team-member-headshots';
+import { Card, CardContent } from "@/components/ui/card";
 
-interface TeamSectionProps {
-  headshots: GenerateTeamMemberHeadshotsOutput['headshots'];
-}
+const teamMembers = [
+    {
+        name: "John Smith",
+        title: "Founder – Ex-Lead Dev at SaaS Co.",
+        photoUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop"
+    },
+    {
+        name: "Sarah Lee",
+        title: "CTO – Built 50+ Apps for Enterprises",
+        photoUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop"
+    }
+];
 
-const teamBios: { [key: string]: string } = {
-  'John Smith': "Founder – Ex-Lead Dev at SaaS Co.",
-  'Sarah Lee': "CTO – Built 50+ Apps for Enterprises",
-};
-
-export default function TeamSection({ headshots }: TeamSectionProps) {
+export default function TeamSection() {
   return (
     <section id="team" className="py-12 md:py-24">
       <div className="container mx-auto px-4">
@@ -24,19 +27,19 @@ export default function TeamSection({ headshots }: TeamSectionProps) {
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 max-w-2xl mx-auto">
-          {headshots.map((member) => (
+          {teamMembers.map((member) => (
             <Card key={member.name} className="text-center overflow-hidden">
                 <div className="aspect-square relative">
                   <Image
-                    src={member.photoDataUri}
+                    src={member.photoUrl}
                     alt={`Headshot of ${member.name}`}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               <CardContent className="p-6">
                 <h3 className="font-headline text-xl font-bold">{member.name}</h3>
-                <p className="text-primary">{teamBios[member.name]}</p>
+                <p className="text-primary">{member.title}</p>
               </CardContent>
             </Card>
           ))}

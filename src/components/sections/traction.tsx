@@ -50,7 +50,7 @@ export default function TractionSection() {
                 </p>
                 <div className="mt-6 flex items-center justify-center gap-4">
                     <Avatar>
-                        <AvatarImage src="https://placehold.co/100x100.png" alt="Jane Doe" data-ai-hint="professional woman" />
+                        <AvatarImage src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&auto=format&fit=crop" alt="Jane Doe" data-ai-hint="professional woman" />
                         <AvatarFallback>JD</AvatarFallback>
                     </Avatar>
                     <div>
