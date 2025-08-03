@@ -2,9 +2,12 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Download } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Button } from "@/components/ui/button";
 
 export default function Footer() {
+  const isMobile = useIsMobile();
   return (
     <footer id="contact" className="border-t border-border/20 py-12 md:py-16">
       <div className="container mx-auto px-4">
@@ -46,6 +49,14 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        {isMobile && (
+          <div className="mt-8 flex justify-center">
+            <Button>
+              <Download className="mr-2 h-4 w-4" />
+              Download App
+            </Button>
+          </div>
+        )}
         <div className="mt-16 border-t border-border/20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} AppVault Inc. All rights reserved. <span className="hidden md:inline">Use code <code className="bg-secondary px-1.5 py-1 rounded-sm font-code">SCROLL10</code> for 10% off.</span></p>
           <div className="flex items-center gap-4 text-sm">
