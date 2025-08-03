@@ -1,47 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { z } from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Github, Linkedin, Loader2, Mail, Twitter } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
-import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
-
-const earlyAccessFormSchema = z.object({
-  email: z.string().email({ message: "Please enter a valid email address." }),
-});
-
-type EarlyAccessFormValues = z.infer<typeof earlyAccessFormSchema>;
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-
-  const form = useForm<EarlyAccessFormValues>({
-    resolver: zodResolver(earlyAccessFormSchema),
-    defaultValues: {
-      email: "",
-    },
-  });
-
-  const onSubmit = async (values: EarlyAccessFormValues) => {
-    setIsSubmitting(true);
-    console.log(values);
-
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-
-    setIsSubmitting(false);
-    form.reset();
-
-    toast({
-      title: "Success!",
-      description: "You've been added to the beta waitlist. We'll be in touch!",
-    });
-  };
 
   return (
     <footer id="contact" className="border-t border-border/20 py-12 md:py-16">
@@ -77,35 +40,18 @@ export default function Footer() {
                 </div>
             </div>
             <div className="md:col-span-8">
-                <h3 className="font-headline text-2xl font-bold">Ready to Launch Your Next App?</h3>
-                <p className="mt-2 text-muted-foreground">Join our beta and discover how AppVault can accelerate your development cycle.</p>
-                <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="mt-6 flex flex-col sm:flex-row gap-4 max-w-lg">
-                        <FormField
-                            control={form.control}
-                            name="email"
-                            render={({ field }) => (
-                            <FormItem className="flex-1">
-                                <FormControl>
-                                <Input type="email" placeholder="Enter your email" {...field} />
-                                </FormControl>
-                                <FormMessage />
-                            </FormItem>
-                            )}
-                        />
-                        <Button type="submit" className="w-full sm:w-auto" disabled={isSubmitting}>
-                            {isSubmitting ? <Loader2 className="animate-spin" /> : "Request Early Access"}
-                        </Button>
-                    </form>
-                    <p className="mt-2 text-sm text-muted-foreground">Sign up to get notified when we launch. No spam, we promise.</p>
-                </Form>
+                <h3 className="font-headline text-2xl font-bold">Still have questions?</h3>
+                <p className="mt-2 text-muted-foreground">Get in touch with our team for support or investment inquiries.</p>
+                 <div className="mt-6 flex flex-col sm:flex-row gap-4 max-w-lg">
+                    <a href="mailto:support@appvault.com" className="text-primary underline">Chat with us</a>
+                </div>
             </div>
         </div>
         <div className="mt-16 border-t border-border/20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} AppVault Inc. All rights reserved. <span className="hidden md:inline">Use code <code className="bg-secondary px-1.5 py-1 rounded-sm font-code">SCROLL10</code> for 10% off.</span></p>
             <div className="flex items-center gap-4 text-sm">
-                <a href="#" className="text-muted-foreground hover:text-foreground">Privacy Policy</a>
-                <a href="#" className="text-muted-foreground hover:text-foreground">Terms of Service</a>
+                <Link href="/privacy-policy" target="_blank" className="text-muted-foreground hover:text-foreground">Privacy Policy</Link>
+                <Link href="/terms-of-service" target="_blank" className="text-muted-foreground hover:text-foreground">Terms of Service</Link>
             </div>
         </div>
       </div>
