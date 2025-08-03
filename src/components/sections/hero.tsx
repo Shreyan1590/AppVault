@@ -1,21 +1,7 @@
-/*
-15-Second Explainer Video Script:
-
-(Scene: Fast-paced montage of different app UIs - social media, delivery, booking)
-VO (Upbeat & Energetic): Tired of building apps from scratch? It's slow. It's expensive.
-
-(Scene: Split screen. Left: A user scrolls through AppVault's template marketplace. Right: The same user drag-and-drops a new logo onto a template in the no-code editor.)
-VO: Introducing AppVault. Choose from 50+ pre-built app templates and customize them in minutes.
-
-(Scene: A finger taps a "Deploy" button on a screen. The app UI instantly appears on a phone.)
-VO: Deploy your custom app today.
-
-(End Scene: AppVault Logo and tagline)
-On-screen text: AppVault. Custom Apps in Minutes, Not Months. Get Started Free.
-*/
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Code, Globe, InfinityIcon } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -36,33 +22,43 @@ export default function HeroSection() {
       ></div>
       <div className="container mx-auto px-4 text-center">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          Deploy Custom Apps in <span className="text-primary">Minutes</span>,
-          <br />
-          Not Months
+          Build & Launch Your App <br/> in <span className="text-primary">Record Time</span>
         </h1>
         <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
-          The only platform that combines ready-made app templates with no-code
-          customization for businesses and developers.
+          Leverage our library of 50+ production-ready app templates and a powerful no-code editor to go from idea to launch faster than ever before.
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            Get Started Free
+            Start Building for Free
           </Button>
           <Button size="lg" variant="outline">
-            View Templates
+            Explore Templates
           </Button>
+        </div>
+
+        <div className="mt-16">
+            <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+                Trusted by innovative companies worldwide
+            </p>
+            <div className="mt-6 flex justify-center items-center gap-x-8 gap-y-4 flex-wrap">
+                <InfinityIcon className="h-8 w-auto text-muted-foreground" />
+                <Globe className="h-8 w-auto text-muted-foreground" />
+                <Code className="h-8 w-auto text-muted-foreground" />
+                <p className="font-bold text-2xl text-muted-foreground">QuantumLeap</p>
+                <p className="font-bold text-2xl text-muted-foreground">NexusCorp</p>
+            </div>
         </div>
 
         <Card className="mt-12 mx-auto max-w-5xl p-2 bg-card/50 backdrop-blur-sm border-border/20 shadow-2xl">
             <div className="bg-background/80 rounded-lg p-2">
                 <div className="aspect-video w-full overflow-hidden rounded-md">
                      <Image
-                        src="https://placehold.co/1200x600.png"
-                        alt="AppVault Platform Showcase"
+                        src="https://placehold.co/1200x675.png"
+                        alt="A user customizing an application in the AppVault no-code editor, with a marketplace of templates visible."
                         width={1200}
-                        height={600}
+                        height={675}
                         className="h-full w-full object-cover object-center"
-                        data-ai-hint="template marketplace no-code editor"
+                        data-ai-hint="app builder interface"
                      />
                 </div>
             </div>

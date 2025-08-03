@@ -1,21 +1,21 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, DraftingCompass, Layers, Rocket } from "lucide-react";
+import { DraftingCompass, Layers, Rocket } from "lucide-react";
 
 const solutionItems = [
   {
     icon: <Layers className="h-8 w-8 text-primary" />,
     title: "50+ Pre-Built Templates",
-    description: "Jumpstart your project with production-ready clones of popular apps like Tinder, Uber, and more.",
+    description: "Jumpstart your project with production-ready clones of popular apps like Tinder, Uber, and more. Save hundreds of hours of design and development.",
   },
   {
     icon: <DraftingCompass className="h-8 w-8 text-primary" />,
-    title: "Drag-and-Drop Customization",
-    description: "Easily modify branding, layouts, and features with our intuitive no-code editor.",
+    title: "Intuitive No-Code Editor",
+    description: "Easily modify branding, layouts, and features with our powerful drag-and-drop editor. No coding required to build a fully functional app.",
   },
   {
     icon: <Rocket className="h-8 w-8 text-primary" />,
-    title: "White-Label for Agencies",
-    description: "Resell our app templates under your own brand and deliver projects faster than ever.",
+    title: "Deploy in One Click",
+    description: "Go from idea to live application in minutes. We handle the hosting, scaling, and infrastructure so you can focus on your business.",
   },
 ];
 
@@ -24,12 +24,9 @@ export default function ProblemSolutionSection() {
     <section id="problem-solution" className="py-12 md:py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-headline text-3xl font-bold md:text-4xl">The Old Way is Broken</h2>
+          <h2 className="font-headline text-3xl font-bold md:text-4xl">Stop Building from Scratch. Start Launching.</h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Building apps from scratch costs an average of{" "}
-            <span className="font-bold text-foreground">$50,000+</span> and takes{" "}
-            <span className="font-bold text-foreground">6+ months</span>. According to CB Insights,
-            60% of startups fail due to tech bottlenecks.
+            Traditional app development is slow, expensive, and risky. The average app costs <span className="font-bold text-foreground">$50,000+</span> and takes <span className="font-bold text-foreground">6-12 months</span> to build. AppVault provides a faster, smarter way to bring your ideas to life.
           </p>
         </div>
 

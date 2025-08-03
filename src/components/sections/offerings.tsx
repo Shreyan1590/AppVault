@@ -1,38 +1,45 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Check } from "lucide-react";
 
 const offerings = [
   {
-    title: "B2C Marketplace",
-    price: "$50 - $500",
-    description: "One-time purchase",
-    features: ["Access to a single app template", "Free updates for 1 year", "Community support"],
-    buttonText: "Browse Templates",
+    title: "Developer",
+    price: "$29",
+    description: "per month",
+    features: [
+      "Access to all app templates",
+      "No-code drag-and-drop editor",
+      "Community support",
+      "Deploy one project",
+    ],
+    buttonText: "Get Started",
     variant: "outline",
   },
   {
-    title: "B2B SaaS Customizer",
-    price: "$99+/month",
-    description: "Per app subscription",
+    title: "Business",
+    price: "$99",
+    description: "per month",
     features: [
-      "No-code drag-and-drop editor",
-      "API integrations",
+      "Everything in Developer, plus:",
+      "Team collaboration (up to 5 users)",
+      "Connect custom domains",
+      "API integrations & webhooks",
       "Priority email support",
-      "Team collaboration",
     ],
-    buttonText: "Start Trial",
+    buttonText: "Start 14-Day Trial",
     variant: "default",
   },
   {
-    title: "B2B White-Label",
-    price: "$1K+/month",
-    description: "Licensing for agencies",
+    title: "Agency & Enterprise",
+    price: "Custom",
+    description: "Contact us for pricing",
     features: [
-      "Resell templates under your brand",
-      "Custom SLAs",
-      "Full code access",
+      "Everything in Business, plus:",
+      "White-labeling solution",
+      "Full source code export",
       "Dedicated account manager",
+      "Custom SLAs",
     ],
     buttonText: "Contact Sales",
     variant: "outline",
@@ -45,10 +52,10 @@ export default function OfferingsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold md:text-4xl">
-            Flexible Plans for Everyone
+            Flexible Plans for Every Team
           </h2>
           <p className="mt-4 text-muted-foreground md:text-lg">
-            From solo developers to large agencies, we have a plan that fits.
+            From solo developers to large agencies, we have a plan that fits your needs.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -59,16 +66,19 @@ export default function OfferingsSection() {
                 offer.variant === "default" ? "border-primary shadow-lg shadow-primary/20" : ""
               }`}
             >
-              <CardHeader className="text-center">
+              <CardHeader className="text-center pb-4">
                 <CardTitle className="font-headline text-2xl">{offer.title}</CardTitle>
-                <p className="text-4xl font-bold text-primary">{offer.price}</p>
-                <p className="text-sm text-muted-foreground">{offer.description}</p>
+                <div className="flex items-baseline justify-center gap-1">
+                    <span className="text-4xl font-bold text-primary">{offer.price}</span>
+                    <span className="text-sm text-muted-foreground">{offer.price.startsWith('$') ? '/month' : ''}</span>
+                </div>
+                <CardDescription>{offer.price.startsWith('$') ? '' : offer.description}</CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-1 flex-col justify-between">
+              <CardContent className="flex flex-1 flex-col justify-between p-6">
                 <ul className="space-y-4">
                   {offer.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-green-500" />
+                    <li key={i} className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}

@@ -1,22 +1,22 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
-import { TrendingUp, Users, Download } from "lucide-react";
+import { TrendingUp, Users, Download, Star } from "lucide-react";
 
 const tractionData = [
   {
     icon: <Users className="h-8 w-8 text-primary" />,
-    value: "1,200+",
-    label: "Waitlist Signups",
+    value: "10,000+",
+    label: "Beta Waitlist Signups",
   },
   {
-    icon: <TrendingUp className="h-8 w-8 text-primary" />,
-    value: "3",
-    label: "Pilot Dev Agencies",
+    icon: <Star className="h-8 w-8 text-primary" />,
+    value: "15",
+    label: "Pilot Agencies Onboarded",
   },
   {
     icon: <Download className="h-8 w-8 text-primary" />,
-    value: "500+",
-    label: "Template Downloads",
+    value: "2,500+",
+    label: "Template Deployments",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function TractionSection() {
           {tractionData.map((item, index) => (
             <Card key={index} className="text-center">
               <CardContent className="p-8">
-                {item.icon}
+                <div className="inline-block rounded-full bg-primary/10 p-4">{item.icon}</div>
                 <p className="mt-4 text-5xl font-bold">{item.value}</p>
                 <p className="mt-2 text-muted-foreground">{item.label}</p>
               </CardContent>
@@ -46,7 +46,7 @@ export default function TractionSection() {
         <Card className="mt-12 max-w-3xl mx-auto bg-card p-8 shadow-lg">
             <CardContent className="p-0 text-center">
                 <p className="text-2xl italic text-foreground">
-                “AppVault cut our app development time by 90%. It's a game-changer for our agency.”
+                “AppVault is a revelation. We delivered a client's MVP in two weeks instead of three months. The ability to customize high-quality templates and export the code gives us the speed of no-code with the power of a custom stack. It's a complete game-changer for our agency.”
                 </p>
                 <div className="mt-6 flex items-center justify-center gap-4">
                     <Avatar>
@@ -55,7 +55,7 @@ export default function TractionSection() {
                     </Avatar>
                     <div>
                         <p className="font-semibold">Jane Doe</p>
-                        <p className="text-sm text-muted-foreground">CTO @ StartupX</p>
+                        <p className="text-sm text-muted-foreground">CTO, Innovate Solutions</p>
                     </div>
                 </div>
             </CardContent>
