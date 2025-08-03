@@ -1,7 +1,6 @@
-
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const testimonials = [
     {
@@ -17,30 +16,41 @@ const testimonials = [
         title: "Founder, Tech Startup",
         avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop",
         avatarFallback: "JS"
+    },
+    {
+        quote: "The white-labeling solution is incredible. We can now offer our clients fully branded, custom applications without hiring a massive development team. Our profit margins have never been better.",
+        name: "Emily White",
+        title: "Director, Digital Agency",
+        avatarUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100&auto=format&fit=crop",
+        avatarFallback: "EW"
     }
 ];
 
 export default function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-12 md:py-24 bg-card">
+    <section id="testimonials" className="py-12 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold md:text-4xl">
-            Loved by Teams Worldwide
+            Social Proof That Feels Alive
           </h2>
           <p className="mt-4 text-muted-foreground md:text-lg">
             Don't just take our word for it. Here's what our customers are saying.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full mt-12"
+        >
+          <CarouselContent>
             {testimonials.map((testimonial, index) => (
-                 <Card key={index} className="bg-background/50 border-border/20 p-8 shadow-lg">
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 group">
+                <div className="p-1">
+                 <Card className="bg-card/50 border-border/20 p-8 shadow-lg h-full transition-transform duration-300 group-hover:scale-105">
                     <CardContent className="p-0 text-left flex flex-col h-full">
-                        <div className="flex items-center mb-4">
-                            {[...Array(5)].map((_, i) => (
-                                <Star key={i} className="h-5 w-5 text-yellow-500 fill-current" />
-                            ))}
-                        </div>
                         <p className="text-lg italic text-foreground flex-grow">
                         “{testimonial.quote}”
                         </p>
@@ -56,8 +66,13 @@ export default function TestimonialsSection() {
                         </div>
                     </CardContent>
                 </Card>
+                </div>
+              </CarouselItem>
             ))}
-        </div>
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
+        </Carousel>
       </div>
     </section>
   );
