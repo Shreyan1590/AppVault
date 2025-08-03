@@ -22,23 +22,21 @@ export default function PrivacyPolicySection() {
           </p>
 
           <h2>3. How We Use Your Information</h2>
-          <p>
-            We use the information we collect to:
-            <ul>
-              <li>Provide, operate, and maintain our website</li>
-              <li>Improve, personalize, and expand our website</li>
-              <li>Understand and analyze how you use our website</li>
-              <li>
-                Develop new products, services, features, and functionality
-              </li>
-              <li>
-                Communicate with you, either directly or through one of our
-                partners
-              </li>
-              <li>Send you emails</li>
-              <li>Find and prevent fraud</li>
-            </ul>
-          </p>
+          <p>We use the information we collect to:</p>
+          <ul>
+            <li>Provide, operate, and maintain our website</li>
+            <li>Improve, personalize, and expand our website</li>
+            <li>Understand and analyze how you use our website</li>
+            <li>
+              Develop new products, services, features, and functionality
+            </li>
+            <li>
+              Communicate with you, either directly or through one of our
+              partners
+            </li>
+            <li>Send you emails</li>
+            <li>Find and prevent fraud</li>
+          </ul>
 
           <h2>4. Contact Us</h2>
           <p>
