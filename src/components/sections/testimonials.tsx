@@ -5,24 +5,24 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const testimonials = [
     {
         quote: "AppVault is a revelation. We delivered a client's MVP in two weeks instead of three months. The ability to customize high-quality templates and export the code gives us the speed of no-code with the power of a custom stack. It's a complete game-changer for our agency.",
-        name: "Jane Doe",
+        name: "Priya Kumar",
         title: "CTO, Innovate Solutions",
-        avatarUrl: "https://placehold.co/100x100.png",
-        avatarFallback: "JD"
+        avatarUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop",
+        avatarFallback: "PK"
     },
     {
         quote: "As a startup founder, time and capital are our most valuable assets. AppVault allowed us to launch and start getting feedback in days, not months. The template library saved us thousands in design and development costs.",
-        name: "John Smith",
+        name: "David Chen",
         title: "Founder, Tech Startup",
-        avatarUrl: "https://placehold.co/100x100.png",
-        avatarFallback: "JS"
+        avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop",
+        avatarFallback: "DC"
     },
     {
         quote: "The white-labeling solution is incredible. We can now offer our clients fully branded, custom applications without hiring a massive development team. Our profit margins have never been better.",
-        name: "Emily White",
+        name: "Aisha Ahmed",
         title: "Director, Digital Agency",
-        avatarUrl: "https://placehold.co/100x100.png",
-        avatarFallback: "EW"
+        avatarUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100&auto=format&fit=crop",
+        avatarFallback: "AA"
     }
 ];
 

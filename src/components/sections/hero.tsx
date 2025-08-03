@@ -41,7 +41,7 @@ export default function HeroSection() {
             <div className="bg-background/80 rounded-lg p-2">
                 <div className="aspect-video w-full overflow-hidden rounded-md">
                      <Image
-                        src="https://placehold.co/1200x675.png"
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
                         alt="A user customizing an application in the AppVault no-code editor, with a marketplace of templates visible."
                         width={1200}
                         height={675}

@@ -6,14 +6,14 @@ const teamMembers = [
         name: "Shreyan S",
         title: "Founder & CEO",
         bio: "Shreyan built his first app at 12 and hasn't stopped shipping since.",
-        photoUrl: "https://placehold.co/400x400.png",
+        photoUrl: "https://images.unsplash.com/photo-1618347318882-a8c24249a4a7?q=80&w=400&auto=format&fit=crop",
         dataAiHint: "indian student"
     },
     {
         name: "M.Tamizhvendhan",
         title: "CTO",
         bio: "A connoisseur of clean code and a master of scaling complex systems.",
-        photoUrl: "https://placehold.co/400x400.png",
+        photoUrl: "https://images.unsplash.com/photo-1610216705422-caa3fc269d95?q=80&w=400&auto=format&fit=crop",
         dataAiHint: "indian student man"
     }
 ];

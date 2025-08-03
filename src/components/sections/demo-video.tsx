@@ -16,7 +16,7 @@ export default function DemoVideoSection() {
         <Card className="mt-12 mx-auto max-w-4xl p-2 bg-card/50 backdrop-blur-sm border-border/20 shadow-2xl">
           <div className="aspect-video w-full overflow-hidden rounded-md relative flex items-center justify-center">
             <Image
-              src="https://placehold.co/1200x675.png"
+              src="https://images.unsplash.com/photo-1588421357574-87938a86fa28?q=80&w=1200&auto=format&fit=crop"
               alt="Demo video thumbnail showing a sleek app interface"
               width={1200}
               height={675}
