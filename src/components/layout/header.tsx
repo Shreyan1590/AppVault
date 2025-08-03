@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from "react";
@@ -7,8 +8,8 @@ import { Menu } from "lucide-react";
 
 const navLinks = [
   { name: "Features", href: "#features" },
-  { name: "How It Works", href: "#how-it-works" },
-  { name: "Offerings", href: "#offerings" },
+  { name: "Demo", href: "#demo" },
+  { name: "Pricing", href: "#pricing" },
   { name: "Team", href: "#team" },
   { name: "FAQ", href: "#faq" },
 ];

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -48,7 +49,7 @@ const offerings = [
   },
 ];
 
-export default function OfferingsSection() {
+export default function PricingSection() {
     const scrollToContact = () => {
     const contact = document.getElementById('contact');
     if (contact) {
@@ -56,7 +57,7 @@ export default function OfferingsSection() {
     }
   };
   return (
-    <section id="offerings" className="bg-card py-12 md:py-24">
+    <section id="pricing" className="bg-card py-12 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold md:text-4xl">

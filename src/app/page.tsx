@@ -4,15 +4,12 @@ import Footer from '@/components/layout/footer';
 import HeroSection from '@/components/sections/hero';
 import ProblemSolutionSection from '@/components/sections/problem-solution';
 import FeaturesSection from '@/components/sections/features';
-import HowItWorksSection from '@/components/sections/how-it-works';
-import UseCasesSection from '@/components/sections/use-cases';
-import OfferingsSection from '@/components/sections/offerings';
-import TractionSection from '@/components/sections/traction';
+import DemoVideoSection from '@/components/sections/demo-video';
+import TestimonialsSection from '@/components/sections/testimonials';
+import PricingSection from '@/components/sections/pricing';
 import TeamSection from '@/components/sections/team';
 import FaqSection from '@/components/sections/faq';
 import { ScrollAnimation } from '@/components/scroll-animation';
-import ContactSection from '@/components/sections/contact';
-import CtaSection from '@/components/sections/cta';
 
 export default async function Home() {
   return (
@@ -27,28 +24,19 @@ export default async function Home() {
           <FeaturesSection />
         </ScrollAnimation>
         <ScrollAnimation>
-          <HowItWorksSection />
-        </ScrollAnimation>
-        <ScrollAnimation animation="slideInLeft">
-          <UseCasesSection />
-        </ScrollAnimation>
-        <ScrollAnimation>
-          <OfferingsSection />
+          <DemoVideoSection />
         </ScrollAnimation>
         <ScrollAnimation animation="fadeIn">
-          <TractionSection />
+          <TestimonialsSection />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <PricingSection />
         </ScrollAnimation>
         <ScrollAnimation>
           <TeamSection />
         </ScrollAnimation>
         <ScrollAnimation animation="fadeIn">
           <FaqSection />
-        </ScrollAnimation>
-        <ScrollAnimation>
-          <CtaSection />
-        </ScrollAnimation>
-        <ScrollAnimation animation="fadeIn">
-          <ContactSection />
         </ScrollAnimation>
       </main>
       <Footer />
