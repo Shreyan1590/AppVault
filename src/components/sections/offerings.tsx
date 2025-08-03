@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Check } from "lucide-react";
@@ -47,6 +49,12 @@ const offerings = [
 ];
 
 export default function OfferingsSection() {
+    const scrollToContact = () => {
+    const footer = document.querySelector('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section id="offerings" className="bg-card py-12 md:py-24">
       <div className="container mx-auto px-4">
@@ -86,6 +94,7 @@ export default function OfferingsSection() {
                 <Button
                   className="mt-8 w-full"
                   variant={offer.variant as "default" | "outline"}
+                  onClick={scrollToContact}
                 >
                   {offer.buttonText}
                 </Button>

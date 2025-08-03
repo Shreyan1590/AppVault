@@ -1,9 +1,23 @@
+"use client";
+
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Code, Globe, InfinityIcon } from "lucide-react";
 
 export default function HeroSection() {
+    const scrollToOfferings = () => {
+    const offerings = document.getElementById('offerings');
+    if (offerings) {
+      offerings.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+    const scrollToContact = () => {
+    const footer = document.querySelector('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section
       id="hero"
@@ -13,8 +27,8 @@ export default function HeroSection() {
         aria-hidden="true"
         className="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-20"
       >
-        <div className="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400"></div>
-        <div className="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300"></div>
+        <div className="blur-[106px] h-56 bg-gradient-to-br from-primary to-cyan-400"></div>
+        <div className="blur-[106px] h-32 bg-gradient-to-r from-blue-400 to-sky-300"></div>
       </div>
        <div
         aria-hidden="true"
@@ -28,10 +42,10 @@ export default function HeroSection() {
           Leverage our library of 50+ production-ready app templates and a powerful no-code editor to go from idea to launch faster than ever before.
         </p>
         <div className="mt-8 flex justify-center gap-4">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" onClick={scrollToContact}>
             Start Building for Free
           </Button>
-          <Button size="lg" variant="outline">
+          <Button size="lg" variant="outline" onClick={scrollToOfferings}>
             Explore Templates
           </Button>
         </div>

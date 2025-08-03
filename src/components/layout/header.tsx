@@ -1,6 +1,14 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 
 export default function Header() {
+  const scrollToContact = () => {
+    const footer = document.querySelector('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm">
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
@@ -23,7 +31,7 @@ export default function Header() {
           </a>
         </div>
         <div className="flex items-center gap-4">
-          <Button>Get Started Free</Button>
+          <Button onClick={scrollToContact}>Get Started Free</Button>
         </div>
       </div>
     </header>
