@@ -41,10 +41,10 @@ export default async function Home() {
           <TeamSection />
         </ScrollAnimation>
         <ScrollAnimation>
-          <ContactSection />
+          <FaqSection />
         </ScrollAnimation>
         <ScrollAnimation>
-          <FaqSection />
+          <ContactSection />
         </ScrollAnimation>
       </main>
       <Footer />
