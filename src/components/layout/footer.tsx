@@ -5,6 +5,13 @@ import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
+    const scrollTo = (selector: string) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
 
   return (
     <footer id="contact" className="border-t border-border/20 py-12 md:py-16">
@@ -50,8 +57,8 @@ export default function Footer() {
         <div className="mt-16 border-t border-border/20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} AppVault Inc. All rights reserved. <span className="hidden md:inline">Use code <code className="bg-secondary px-1.5 py-1 rounded-sm font-code">SCROLL10</code> for 10% off.</span></p>
             <div className="flex items-center gap-4 text-sm">
-                <Link href="/privacy-policy" target="_blank" className="text-muted-foreground hover:text-foreground">Privacy Policy</Link>
-                <Link href="/terms-of-service" target="_blank" className="text-muted-foreground hover:text-foreground">Terms of Service</Link>
+                <button onClick={() => scrollTo("#privacy-policy")} className="text-muted-foreground hover:text-foreground">Privacy Policy</button>
+                <button onClick={() => scrollTo("#terms-of-service")} className="text-muted-foreground hover:text-foreground">Terms of Service</button>
             </div>
         </div>
       </div>

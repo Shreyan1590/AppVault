@@ -12,6 +12,8 @@ import PricingSection from '@/components/sections/pricing';
 import TeamSection from '@/components/sections/team';
 import FaqSection from '@/components/sections/faq';
 import { ScrollAnimation } from '@/components/scroll-animation';
+import PrivacyPolicySection from '@/components/sections/privacy-policy';
+import TermsOfServiceSection from '@/components/sections/terms-of-service';
 
 export default async function Home() {
   return (
@@ -31,7 +33,7 @@ export default async function Home() {
         <ScrollAnimation>
           <DemoVideoSection />
         </ScrollAnimation>
-         <ScrollAnimation animation="slideInLeft">
+        <ScrollAnimation animation="slideInLeft">
           <UseCasesSection />
         </ScrollAnimation>
         <ScrollAnimation animation="fadeIn">
@@ -45,6 +47,12 @@ export default async function Home() {
         </ScrollAnimation>
         <ScrollAnimation animation="slideInUp">
           <TeamSection />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <PrivacyPolicySection />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <TermsOfServiceSection />
         </ScrollAnimation>
         <ScrollAnimation animation="fadeIn">
           <FaqSection />
